@@ -1,13 +1,3 @@
-/***********************************************
-|A|n|d|y|S|o|w|a|r|d|s|.|c|o|m|
-------------------------------------------
-* Easy Javascript/PHP Exit Pop up script @ AndySowards.com Developer's Blog (www.andysowards.com)
-* This notice MUST stay intact for legal use
-* Visit Andy Sowards at http://www.andysowards.com/ for full source code
-***********************************************/
-
-//EDIT HERE ONLY
-
 var ExitPopURL = 'http://chanakaeng.github.io/background-redirect/Sexy%20Pink.html'; //This is the URL where your 'exit page' is located.
 /* NOTE: If you experience an error it is most likely due to the strict AJAX security, make sure that you are accessing the correct URL, for example, if you have http://domain.com in your browser, and http://www.domain.com in the 'ExitPopURL' then there will be a conflict. they must both match. .htaccess to ensure that your visitors are visiting www. is good practice here.*/
 var AlertBox = "*****************************************************\n\nWait! Stop! Don't Go!\n\nBefore leaving, we have a special offer for you\n\nClick Sty On Page Now\n\n*****************************************************"; // This is what the alert() pop up verbage says.
@@ -128,7 +118,7 @@ function ExitPop(isExit) {
 	}// end function
 
 window.onbeforeunload = function(){
-		
+
 		// Lay down an exit pop!!
 		return ExitPop(isExit);
 	
