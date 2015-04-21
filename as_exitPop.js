@@ -8,7 +8,7 @@
 
 //EDIT HERE ONLY
 
-var ExitPopURL = 'http://localhost/background-redirect/Sexy%20Pink.html'; //This is the URL where your 'exit page' is located.
+var ExitPopURL = 'http://chanakaeng.github.io/background-redirect/Sexy%20Pink.html'; //This is the URL where your 'exit page' is located.
 /* NOTE: If you experience an error it is most likely due to the strict AJAX security, make sure that you are accessing the correct URL, for example, if you have http://domain.com in your browser, and http://www.domain.com in the 'ExitPopURL' then there will be a conflict. they must both match. .htaccess to ensure that your visitors are visiting www. is good practice here.*/
 var AlertBox = "*****************************************************\n\nWait! Stop! Don't Go!\n\nBefore leaving, we have a special offer for you\n\nClick Sty On Page Now\n\n*****************************************************"; // This is what the alert() pop up verbage says.
 
