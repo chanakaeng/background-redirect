@@ -1,0 +1,820 @@
+<html><head>
+    <!-- base href="http://w1.mozzi.com/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Pragma" content="no-cache"><script src="CLEAN%20PRO_files/analytics.js" async=""></script><script src="CLEAN%20PRO_files/jquery.js"></script>    <style>/* ---------------------------- top hooks and bottom hooks layout styling ------------------------------ */
+
+.footer, .toplegal {font-size: 11px; text-align: justify; display:table; width:100%;} 
+
+.toplegal p {margin: 0;}
+
+.popup-bottom, .popup-top{display:table-row;}
+
+.hook-confirmationBodyStart, hook-confirmationBodyEnd{padding:5px; text-align:center;}
+.hook-confirmationBodyStart{margin-top:10px;}
+.hook-confirmationBodyEnd{margin-bottom:10px;}
+
+.hook-topLeft, .hook-topCenter, .hook-topRight{margin:0; top:0;}
+.hook-confirmationTopLeft, .hook-confirmationTopCenter, .hook-confirmationTopRight{margin:0;}
+
+.hook-topLeft, .hook-bottomLeft, .hook-confirmationTopLeft, .hook-confirmationBottomLeft{text-align:left;}
+.hook-topCenter, .hook-bottomCenter{text-align:justify;}
+.hook-topRight, .hook-bottomRight, .hook-confirmationTopRight, .hook-confirmationBottomRight{text-align:right;}
+.hook-confirmationTopCenter, .hook-confirmationBottomCenter{text-align:center;}
+
+.hook-bottomLeft, .hook-bottomCenter, .hook-bottomRight, .hook-topLeft, .hook-topCenter, .hook-topRight {display:table-cell; padding:5px; vertical-align: top;}
+.hook-confirmationTopLeft, .hook-confirmationTopCenter, .hook-confirmationTopRight, .hook-confirmationBottomLeft, .hook-confirmationBottomCenter, .hook-confirmationBottomRight
+{display:table-cell; padding:5px;}
+
+
+/* ---------------------------- end top hooks and bottom hooks layout styling ------------------------------ */</style><style>
+/* ------------------------------------------updated hooks 26 November 2014-------------------------------------------------.css */
+
+@charset "utf-8";
+*{margin:0; padding:0;}
+.clear{clear:both;}
+html, body {
+	width:100%; height:100%; margin:0; padding:0; min-height:680px; min-width:960px;
+	font-size:1em; text-align:center; color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#62bcfa; direction:rtl;
+}
+.container{background-color:#fff; min-height:640px; direction:rtl;}
+
+h1, h2, h5{margin:0; padding:0;}
+
+.top_title{background-color:#62bcfa; padding:5px 0 0; height:157px; z-index:2;}
+.div_title, .div_content{width:100%; max-width:960px; margin:0 auto;}
+.div_title{height:115px;}
+.title_img{max-height:115px; min-width:90px;}
+.div_titleleft{width:27%; float:left; text-align:right; padding-right:3%;}
+.div_titleright{width:64%; padding:0 2%; float:right; font-size:2em; font-weight:700; text-align:left; direction:ltr; }
+.div_titleright h1{font-size:2.7em; font-weight:700; }
+.div_titleright h4{font-size:0.6em; margin-top:-10px; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.div_titleright h1:after{font-size:0.33em; font-weight:700; content:'Pro'; margin-left:-50px; margin-top:2px; position:absolute; color:#325eb5; }
+
+.div_clouds, .div_cloudsbottom{width:100%; height:42px; background:url('/resource/shared/cleanpro/imgp/cloud.gif') repeat-x left;}
+.div_cloudsbottom{
+	-moz-transform: scaleY(-1);
+	-o-transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
+	filter: FlipY;
+	-ms-filter: "FlipY";
+}
+
+
+.div_content{padding-top:5px;}
+.phone_box{
+	float:left; width:20%; padding-left:2%;
+	max-width:242px; height:455px;
+}
+.content_cta{
+	float:right; width:70%; text-align:left; height:455px;
+}
+
+.div_review{
+	font-size:1.1em; font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif;
+	text-align:right; margin:20px 5%; color:#333; width:66%; float:left;
+}
+.div_review img{ vertical-align:middle;}
+.div_review span{font-style:italic; background-color:#e2e2e2;}
+h5{font-size:0.8em; margin-top:5px; color:#666; clear:both; text-align:right; width:73%; float:left;}
+
+#cta_box_white{
+	background-color:#4595C0; color:#fff; float:left;
+	padding:5px 5px 20px; width:78%; border:3px solid #fff;
+	-webkit-box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.5);
+	-moz-box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.5);
+	border-radius: 55px 0px 55px 0px;
+	-moz-border-radius: 55px 0px 55px 0px;
+	-webkit-border-radius: 55px 0px 55px 0px;
+}
+
+#cta{width:92%; margin:0 auto; margin-top:20px; padding-left:3%;}
+.pin_title{
+	color:#D1E7E9; font-weight:bold;
+	padding-bottom:8px; margin-bottom:4%; text-align:right; padding-right:9%;
+}
+.pin_title span{ font-size:1.35em; font-weight:bold; color:#fff;}
+.tq_title{font-size:2.2em; font-weight:bold; text-align:right; padding-right:9%;}
+
+.operator{ margin:5px 0; width:48%; float:right; margin-right:7%;}
+.cta_entermobile{
+	font-size:1.65em;
+	font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif;
+	margin:2% 0 4%; line-height:25px; height:50px; 
+}
+.pin_entermobile{ height:30px; margin-bottom:3%;}
+.cta_E{
+	vertical-align:text-top; font-style:italic; text-shadow: 2px 2px 5px #000;
+	font-size:3.4em; 
+	width:6%; min-width:55px; float:left; margin-top:5px;
+}
+.pin_E{
+	vertical-align:text-top; font-style:italic; text-shadow: 2px 2px 5px #000;
+	font-size:2.1em; 
+	width:5%; min-width:36px; float:left; margin-top:-5px;
+}
+.cta_sbtxt{width:91%; float:left; font-family:"Arial Black", sans-serif; letter-spacing:-1px; text-align:right;} /* size specifically for ARABIC only */
+.cta_sbtxt span{
+	font-family:Georgia, "Times New Roman", Times, serif; font-style:italic;
+	font-size:0.87em; color:#D1E7E9; display:block;
+}
+.msisdn-group{ display:inline;}
+.div_msisdn{padding:0; /*height:70px;*/ text-align:right; margin-right:7%;}
+#get_phoneno, .msisdn-input, .pin-input{
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	font-size:2em; font-weight:bold; padding:10px 5px;
+	border:4px solid #ADC1E2; /*width:48%;*/ direction:ltr;
+}
+.blink_msisdn {
+    animation:blink .6s step-end infinite alternate;
+	-webkit-animation:blink .6s step-end infinite alternate;
+}
+
+.btn_cta, .btn_disable, .msisdn-submit-button, .pin-submit-button, .msisdn-submit-disable, .pin-submit-disable{
+	background: rgb(210,255,82);
+	background: -moz-linear-gradient(top, rgb(210,255,82) 0%, rgb(145,232,66) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(210,255,82)), color-stop(100%, rgb(145,232,66)));
+	background: -webkit-linear-gradient(top, rgb(210,255,82) 0%, rgb(145,232,66) 100%);
+	background: -o-linear-gradient(top, rgb(210,255,82) 0%, rgb(145,232,66) 100%);
+	background: -ms-linear-gradient(top, rgb(210,255,82) 0%, rgb(145,232,66) 100%);
+	background: linear-gradient(to bottom, rgb(210,255,82) 0%, rgb(145,232,66) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842', GradientType=0 );
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.48);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.48);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.48);
+	border: 4px solid #fff; font-family:"Arial Black", Gadget, sans-serif;
+	font-size:1.5em; font-weight:bold; color:#033;
+	padding:12px 5%; margin-left:1%; max-width:44%;
+	cursor:pointer;
+}
+.btn_disable, .msisdn-submit-disable, .pin-submit-disable{
+	background: rgb(142,179,110);
+	background: -moz-linear-gradient(top, rgb(142,179,110) 0%, rgb(97,120,85) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(142,179,110)), color-stop(100%, rgb(97,120,85)));
+	background: -webkit-linear-gradient(top, rgb(142,179,110) 0%, rgb(97,120,85) 100%);
+	background: -o-linear-gradient(top, rgb(142,179,110) 0%, rgb(97,120,85) 100%);
+	background: -ms-linear-gradient(top, rgb(142,179,110) 0%, rgb(97,120,85) 100%);
+	background: linear-gradient(to bottom, rgb(142,179,110) 0%, rgb(97,120,85) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb36e', endColorstr='#617855', GradientType=0 );
+	border: 4px solid #999; color:#222;
+}
+/*.btn_cta img, .btn_disable img, .msisdn-submit-button img, .pin-submit-button img{ vertical-align:middle; margin-top:-4px;}*/
+.msisdn-submit-disable #btn_img, .pin-submit-disable #btn_img{ width:25px; height:26px; float:left; margin-right:3px; margin-top:2px; content:url(/resource/shared/cleanpro/imgp/greenbutton.png);}
+#btn_img{ width:25px; height:26px; float:right; display:inline-block; margin-right:3px; margin-top:2px; content:url(/resource/shared/cleanpro/imgp/greenbutton.png);}
+.legal-checkbox-wrap, .incentivized-checkbox-wrap{text-align:right; padding-right:10%;}
+.errMsg{font-size:0.65em; padding-left:18%; width:50%; display:block;}
+
+.tq_txt{font-size:1.2em; margin:4% 0 0; text-align:right; padding-right:9%;}
+.tq_txt2{font-size:1.3em; font-weight:bold; margin:2% 0 6%; color:#D1E7E9; text-align:right; padding-right:9%;}
+.tq_keyshort{
+	font-size:2.5em; font-weight:bold; color:#CF0;
+	font-family:"Arial Black", Gadget, sans-serif;
+	text-shadow:3px 3px 2px #000;
+	animation:blink2 .6s step-end infinite alternate;
+	-webkit-animation:blink2 .6s step-end infinite alternate;
+}
+
+
+.cta_legal{font-size:0.8em; font-weight:bold; line-height:1.1em; margin:1% 0 2%;}
+#confirmation-legal-wrapper, #confirmation-incentivized-wrapper{background-color:#fff; padding:5% 0; color:#000; width:100%; margin-top:15%; text-align:center;}
+
+#confirmation-legal-wrapper button, #confirmation-incentivized-wrapper button{padding:5px 10px; background-color:#06C; font-weight:bold; color:#fff; border:none;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#confirmation-legal-wrapper button:hover, #confirmation-incentivized-wrapper button:hover{ background-color:#000;}
+
+.footer, .toplegal {background-color:#fff;} 
+.hook-topLeft, .hook-topCenter, .hook-topRight, .hook-bottomLeft, .hook-bottomCenter, .hook-bottomRight{color:#666;}
+
+
+
+/* iPhone-specific styles */
+@media only screen and (max-device-width: 480px) {
+
+ html {
+  -webkit-text-size-adjust: none;
+  }
+ }
+
+
+/* ----------------------------------------animation.css----------------------------------------------- */
+
+/* ------------- redtitle fadeinDown effect --------------- */
+.animate{
+	-webkit-animation-duration: 1.5s; -webkit-animation-fill-mode: both; 
+    animation-duration: 1.5s; animation-fill-mode: both; 
+}
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+#redtitle{-webkit-animation-name: fadeInDown; animation-name: fadeInDown;}
+
+/* ------------- redtitle fadeinDown effect --------------- */
+
+/* ******************************************************** */
+/* ------------- phone fadeinLeft effect --------------- */
+@-webkit-keyframes fadeInLeft { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(-80px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateX(0); 
+    } 
+} 
+
+@keyframes fadeInLeft { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-80px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+} 
+.phone_box {-webkit-animation-name: fadeInLeft; animation-name: fadeInLeft;}
+
+/* ------------- phone fadeinDown effect --------------- */
+/* ******************************************************** */
+
+/* ------------- ctabox fadeinDown effect --------------- */
+
+@-webkit-keyframes pulse { 
+    0% { -webkit-transform: scale(0.7); } 
+    50% { -webkit-transform: scale(1.1); } 
+    100% { -webkit-transform: scale(1); } 
+} 
+@keyframes pulse { 
+    0% { transform: scale(0.7); } 
+    50% { transform: scale(1.1); } 
+    100% { transform: scale(1); } 
+} 
+
+#cta_box_white { 
+    -webkit-animation-name: pulse; 
+    animation-name: pulse; 
+}
+
+/* ------------- ctabox fadeinDown effect --------------- */
+
+
+@-webkit-keyframes blink{
+	0% {border:4px solid #ADC1E2; border-color:transparent;}
+	50%{border:4px solid #00be4f;}
+}
+@keyframes blink{
+	0% {border:4px solid #ADC1E2; border-color:transparent;}
+	50%{border:4px solid #00be4f;}
+}
+
+@-webkit-keyframes blink2{
+	50%{color:#0F0;}
+}
+
+@keyframes blink2{
+	50%{color:#0F0;}
+}</style>    <title>CLEAN PRO</title>
+
+</head>
+<body>
+    <form id="mainForm" action="/jo/clean-pro"><img src="CLEAN%20PRO_files/a.png" style="position: absolute;" height="0px" width="0px">
+                        <input name="country" value="jo" type="hidden">
+                                    <input name="handle" value="clean-pro" type="hidden">
+                                    <input name="offer" value="1" type="hidden">
+                                    <input name="device" value="pc" type="hidden">
+            <input name="_extracted" value="YToyOntzOjEwOiJzdGVwU3RhdGVzIjthOjk6e3M6MTU6ImNhcHR1cmVPcGVyYXRvciI7czo3OiJJbml0aWFsIjtzOjEzOiJjYXB0dXJlTXNpc2RuIjtzOjc6IkluaXRpYWwiO3M6MjA6ImNhcHR1cmVDb25maXJtYXRpb25zIjtzOjc6IkluaXRpYWwiO3M6Njoic2VuZE1vIjtzOjc6IkluaXRpYWwiO3M6MjE6Im9wZXJhdG9yQ29uZmlybWF0aW9ucyI7czo3OiJJbml0aWFsIjtzOjg6InNob3dNb1RxIjtzOjc6IkluaXRpYWwiO3M6Nzoic2VuZFBpbiI7czo3OiJJbml0aWFsIjtzOjEwOiJjYXB0dXJlUGluIjtzOjc6IkluaXRpYWwiO3M6OToic2hvd1BpblRxIjtzOjc6IkluaXRpYWwiO31zOjY6InZhbHVlcyI7YToxOTp7czo4OiJvcGVyYXRvciI7TjtzOjE3OiJvcGVyYXRvclN1Ym1pdHRlZCI7TjtzOjE1OiJwcmVmaXhTZWxlY3Rpb24iO047czoxOToic25hcHNob3RRdWVyeVN0cmluZyI7czo2MDoiWTI5MWJuUnllVDFxYnlab1lXNWtiR1U5WTJ4bFlXNHRjSEp2Sm05bVptVnlQVEVtWkdWMmFXTmxQWEJqIjtzOjExOiJxdWVyeVN0cmluZyI7TjtzOjEyOiJtYXBwZXJTdHJpbmciO3M6MjM1OiJ7InB1Ymxpc2hlcmlkIjoiIiwiY2xpY2tpZCI6ImRPTjFVTnhQQ2VwbnFrTkVZa3l4WjJUcHhQOFhQenMxUV9sZTJsUUR4U3J1OW9lMkIxTjUxbDBUc0VQU2lxRWU4SC5XSWlGMXd0VFBONnRiUGlvOFp3LS0iLCJzdWJpZCI6IiIsIm1hcHBlcl9jb2RlIjoiZE9OMVVOeFBDZXBucWtORVlreXhaMlRweFA4WFB6czFRX2xlMmxRRHhTcnU5b2UyQjFONTFsMFRzRVBTaXFFZThILldJaUYxd3RUUE42dGJQaW84WnctLSJ9IjtzOjE4OiJvcmlnaW5hbFBhcmFtZXRlcnMiO2E6NDp7czo3OiJjb3VudHJ5IjtzOjI6ImpvIjtzOjY6ImhhbmRsZSI7czo5OiJjbGVhbi1wcm8iO3M6NToib2ZmZXIiO3M6MToiMSI7czo2OiJkZXZpY2UiO3M6MjoicGMiO31zOjk6InNlc3Npb25JZCI7TjtzOjY6Im1zaXNkbiI7TjtzOjEzOiJsZWdhbENoZWNrYm94IjtOO3M6MjA6ImluY2VudGl2aXplZENoZWNrYm94IjtOO3M6MTU6Im1zaXNkblN1Ym1pdHRlZCI7TjtzOjk6InNlbmRpbmdNbyI7TjtzOjE4OiJvcF9jb25maXJtQ2hlY2tib3giO047czo2OiJob2xkTW8iO047czoxMDoic2VuZGluZ1BpbiI7TjtzOjM6InBpbiI7TjtzOjEyOiJwaW5TdWJtaXR0ZWQiO047czo3OiJob2xkUGluIjtOO319" type="hidden">
+
+<input id="gaclientid" name="gaclientid" value="1404066566.1429582693" type="hidden">
+<div class="container">
+	<div class="toplegal">
+	            </div>
+    <div class="clear top_title">
+    	<div class="div_title">
+			<div class="div_titleleft">
+            <img src="CLEAN%20PRO_files/logo_sweep.gif" alt="cleanpro" class="title_img">
+            </div>
+            <div class="div_titleright">
+            	<h1>Clean</h1>
+                <h4>"تنظيف الجوال الخاص بك من الملفات الغير مرغوب بها واجعله اسرع من اي وقت مضى"</h4>
+                
+            </div>
+        </div>
+        <div class="clear div_clouds"></div>
+	</div> <!-- -------------end top title div---------------- //-->
+<script>
+    var maxNum = [10];
+    var minNum = [10];
+    var pinMin = 4;
+
+    $(document).ready(function() {
+
+        // restrict phone input
+        $('.numeric-field').keypress(function(key) {
+            if (key.charCode == 13) { // enter key
+                return true;
+            }
+
+            if(key.charCode < 48 || key.charCode > 57) {
+                if (key.charCode != 0){
+                    return false;
+                }
+            }
+        });
+
+        $('.numeric-field').each(function() {
+            var element = this;
+            var jqElement = $(element);
+
+            focusInput(jqElement);
+            checkInputCompleted(jqElement);
+
+            var previousValue = element.value;
+            setInterval(function () {
+                if (element.value != previousValue) {
+                    previousValue = element.value;
+                    checkInputCompleted(jqElement);
+                }
+            }, 50);
+        });
+
+    });
+
+    function focusInput(input)
+    {
+        var id = input.attr('id');
+        var index = Number(id.substr(id.indexOf('_')+1));
+        var type = id.search('msisdn') != -1 ? 'msisdn' :'pin';
+
+        input.focus(function() {
+            setTimeout((function(el) {
+                var strLength = el.value.length;
+                return function() {
+                    if(el.setSelectionRange !== undefined) {
+                        el.setSelectionRange(strLength, strLength);
+                    } else {
+                        $(el).val(el.value);
+                    }
+                }}(this)), 5);
+        });
+
+        if (type == 'msisdn') {
+            if (index == 0){
+                $('#'+type+'_'+index).focus();
+            }
+        }else{
+            input.focus();
+        }
+    }
+
+    function checkInputCompleted(input)
+    {
+        var id = input.attr('id');
+        var index = Number(id.substr(id.indexOf('_')+1));
+        var type = id.search('msisdn') != -1 ? 'msisdn' :'pin';
+        var min = 0;
+        if (type == 'msisdn') {
+            min = minNum[index];
+        }else{
+            min = pinMin;
+        }
+        if (input.val().length >= min){
+            input.attr('finish','true');
+        }else{
+            input.removeAttr("finish");
+        }
+        checkAllInputCompleted(type);
+    }
+    function checkAllInputCompleted(type)
+    {
+        if (type == 'msisdn'){
+            for (var i=0;i<minNum.length;i++){
+                if ($('#'+type+'_'+i).attr('finish') != 'true'){
+                    disableSubmit(type);
+                    return;
+                }
+            }
+        }else{
+            if ($('#'+type).attr('finish') != 'true'){
+                disableSubmit(type);
+                return;
+            }
+        }
+        enableSubmit(type);
+     }
+    function disableSubmit(buttonType)
+    {
+        $('#'+buttonType+'-submit-button')
+         .attr("disabled", "disabled")
+         .removeClass(buttonType+'-submit-button')
+         .addClass(buttonType+'-submit-disable');
+    }
+
+    function enableSubmit(buttonType)
+    {
+        $('#'+buttonType+'-submit-button')
+         .removeAttr("disabled", "disabled")
+         .addClass(buttonType+'-submit-button')
+         .removeClass(buttonType+'-submit-disable');
+    }
+
+    function checkMsisdnValid (e) {
+        var operatorsPrefixes = {
+                                                                'JO_ZAIN':['079']
+                                                        ,'JO_UMNIAH':['078']
+                                                        ,'JO_ORANGE':['077']
+                                                       }
+        var prefixes = ['077','078','079'];
+        var portable = false;
+        var errType = 0; //0 = no error, 1 = not a number, 2 = prefix not mismatch, 3 = operator mismatch, 4 = too less number, 5 = too many number,
+        var errMsg = {"OPERATOR_MISMATCH":"OPERATOR_MISMATCH","NOT_VALID_MSISDN":"<span style=\"color:#FF0000;\"><span style=\"font-family:arial,helvetica,sans-serif;\"><span style=\"font-size:12px;\">\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641 \u0627\u0644\u062c\u0648\u0627\u0644 \u063a\u064a\u0631 \u0635\u062d\u064a\u062d<\/span><\/span><\/span>","OPERATOR_NOT_SELECTED":"OPERATOR_NOT_SELECTED"};
+
+        if ($("#operator").val() == "-none-"){
+            errType = 6;
+        }
+        $("#msisdnErrMsg").empty();
+        $("input.msisdn").each(function() {
+            var msisdn = $(this).val();
+            var index = Number($(this).attr('id').substr(7));
+            var reg = /^\d+$/;
+            var result = reg.test(msisdn);
+            if (!result && errType == 0) {
+                errType = 1;
+            } else if (msisdn.length <  minNum[index] && errType == 0){
+                errType = 4;
+            } else if (msisdn.length > maxNum[index] && errType == 0) {
+                errType = 5;
+            } else if ($(this).attr('id') == "msisdn_0"){
+                var prefixesMatched = false;
+                if (portable){
+                    if (prefixes.length == 0){
+                        prefixesMatched = true;
+                    }else{
+                        for (var i=0; i<prefixes.length; i++){
+                            if (prefixes[i] != "" && prefixes[i] != null){
+                                if(msisdn.substr(0,prefixes[i].length) == prefixes[i]){
+                                    prefixesMatched = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (!prefixesMatched && errType == 0){
+                        errType = 2;
+                    }
+                }else{
+                    if ($("#operator").val() == undefined || $("#operator").val() == null){
+                        prefixesMatched = true;
+                    }else{
+                        for (var fqn in operatorsPrefixes){
+                            if ($("#operator").val() == fqn){
+                                for (var i=0; i<operatorsPrefixes[fqn].length; i++){
+                                    if(msisdn.substr(0,operatorsPrefixes[fqn][i].length) == operatorsPrefixes[fqn][i]){
+                                        prefixesMatched = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (!prefixesMatched && errType == 0){
+                        errType = 3;
+                    }
+                }
+            }
+
+        });
+        switch (errType){
+            case 1:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 2:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 3:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 4:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 5:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 6:
+                var errMsgIndex = "OPERATOR_NOT_SELECTED";
+                break;
+
+        }
+
+        $("#msisdnErrMsg").append(errMsg[errMsgIndex]);
+
+        if (errType > 0) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        }
+
+        return true;
+    }
+
+    function checkPinValid (e) {
+        var errTypePin = 0; //0 = no error, 1 = not a pin, 2 = too less number, 3 = too many number,
+        var errMsgPin = {"MISMATCH_PIN":"MISMATCH_PIN","NOT_VALID_PIN":"<span style=\"color:#FF0000;\">\u0631\u0642\u0645 \u0627\u0644\u062a\u0639\u0631\u064a\u0641 \u0627\u0644\u0634\u062e\u0635\u064a \u062e\u0627\u0637\u0626<\/span>"};
+        var maxNum = 4;
+        var minNum = 4;
+
+        $("#pinErrMsg").empty();
+
+        $("#pin").each(function() {
+
+            var pin = $(this).val();
+            var index = Number($(this).attr('id').substr(4));
+            var reg = /^\d+$/;
+            var result = reg.test(pin);
+
+            if (!result && errTypePin == 0) {
+                errTypePin = 1;
+            } else if (pin.length <  minNum && errTypePin == 0){
+                errTypePin = 2;
+            } else if (pin.length > maxNum && errTypePin == 0) {
+                errTypePin = 3;
+            }
+
+        });
+        switch (errTypePin){
+            case 1:
+            case 2:
+            case 3:
+                var errMsgIndexPin = "NOT_VALID_PIN";
+                break;
+        }
+        $("#pinErrMsg").append(errMsgPin[errMsgIndexPin]);
+
+        if (errTypePin > 0) {
+            e.preventDefault();
+            return false;
+        }
+    }
+
+    function checkValidity(e){
+
+        if($("#pin").length ){
+           return checkPinValid(e);
+        }
+        if($("input.msisdn").length ){
+           return checkMsisdnValid(e);
+        }
+        return true;
+    }
+
+    $('#mainForm').submit(checkValidity);
+</script>
+
+    <div class="clear div_content" id="content">
+        <div class="phone_box animate">
+        <img src="CLEAN%20PRO_files/phone.gif" alt="phone">   
+        </div>
+        
+        <div class="content_cta">
+        	<div class="div_review">
+            <span> تقييم التطبيق اغسطس 2014</span><img src="CLEAN%20PRO_files/star.png" alt="rating"><br>
+            
+            </div>   
+            <div id="cta_box_white" class="animate">
+                <div id="cta">
+                	<div class="cta_entermobile">
+                    	<!--div class="cta_E">e</div//-->
+                    	<div class="cta_sbtxt">
+                        ادخل رقم هاتفك الجوال <span>لتحميل التطبيق الان:</span></div>
+                    </div>
+    	    	    <div class="clear div_msisdn">
+                    <div class="hook-block hook-beforeInput"><span class="msisdnErrMsg errMsg" id="msisdnErrMsg"></span><span class="operatorErrMsg errMsg" id="operatorErrMsg"></span>
+</div>                    <div class="hook-block hook-beforeSubmit">
+    <input name="legalCheckbox" value="Y" type="hidden">
+
+    <input name="incentivizedCheckbox" value="Y" type="hidden">
+</div>                        <script type="text/javascript">
+        function updateOperatorSelection(current, previous, isPrefix) {
+            var value = null;
+            var preValue = null;
+
+            if (isPrefix) {
+                var prefixsMap = {};
+
+                                    prefixsMap['JO_ZAIN'] = ["079"];
+                                    prefixsMap['JO_UMNIAH'] = ["078"];
+                                    prefixsMap['JO_ORANGE'] = ["077"];
+                
+                for (var operator in prefixsMap){
+                    var prefixs = prefixsMap[operator];
+
+                    if (value == null) {
+                        if (prefixs.indexOf(current) > -1) {
+                            value = operator;
+                        }
+                    }
+
+                    if (preValue == null) {
+                        if (prefixs.indexOf(previous) > -1) {
+                            preValue = operator;
+                        }
+                    }
+
+                    if (value != null && preValue != null) {
+                        break;
+                    }
+                }
+            } else {
+                value = current;
+                preValue = previous;
+            }
+
+            var prevSelector = "span[criteria*='"+ preValue +"']";
+            var selector = "span[criteria*='"+ value +"']";
+
+            $(prevSelector).hide();
+            $(selector).show();
+
+            var operatorsWithConfirmation = [];
+
+            if (operatorsWithConfirmation.hasOwnProperty(value)) {
+                $('#op_confirm-checkbox').prop('checked', false);
+                if (operatorsWithConfirmation[value] == 'displayWithYesButtonOnly') {
+                    $('#accept-op_confirm-checkbox').show();
+                    $('#decline-op_confirm-checkbox').hide();
+                } else if (operatorsWithConfirmation[value] == 'displayWithNoButtonOnly') {
+                    $('#accept-op_confirm-checkbox').hide();
+                    $('#decline-op_confirm-checkbox').show();
+                } else {
+                    $('#accept-op_confirm-checkbox').show();
+                    $('#decline-op_confirm-checkbox').show();
+                }
+            } else {
+                $('#op_confirm-checkbox').prop('checked', true);
+            }
+
+            // External page handling.
+            $('a.component-link').attr('href', function( _idx, oldHref) {
+                if (value == '-none-') {
+                    return oldHref.replace(/operator=[^&]*/, 'operator=');
+                } else {
+                    return oldHref.replace(/operator=[^&]*/, 'operator=' + value);
+                }
+            });
+        }
+    </script>
+
+    <div class="operator-group">
+        <select id="operator" name="operator" class="operator operator-selection">
+            <option selected="selected" value="-none-">اختر شبكة الاتصالات</option>
+                            <option value="JO_ZAIN">Zain</option>
+                            <option value="JO_UMNIAH">Umniah</option>
+                            <option value="JO_ORANGE">Orange</option>
+                    </select>
+                    <script type="text/javascript">
+            (function() {
+                var previous;
+
+                $("select#operator").on('focus', function () {
+                    // Store the current value on focus and on change
+                    previous = this.value;
+                }).change(function () {
+                    var value = this.value;
+                    updateOperatorSelection(value, previous, false);
+                    previous = value;
+                });
+            })();
+            $(document).ready(
+                function () {
+                    updateOperatorSelection($("#operator").val(), '', false);
+                }
+            );
+            </script>
+            </div>
+
+    
+					<div class="msisdn-group">
+<input name="msisdnSubmitted" value="Y" type="hidden">
+    <span class="msisdn msisdn-input-wrap msisdn-input-wrap-0"><input class="numeric-field msisdn msisdn-input msisdn-input-0" maxlength="10" id="msisdn_0" name="msisdn[0]" value="07" size="10" tabindex="1" autofocus="" type="text"></span>
+</div>
+
+                    <button disabled="disabled" type="submit" id="msisdn-submit-button" class="submit-button msisdn-submit-disable" value="proceed">					<div id="btn_img"></div>
+                    تابع
+					</button>    		        </div>
+                                        	        	    <div class="cta_legal">
+                    
+                    </div> <!-- Price info -->
+                </div>
+            </div><!------------end CTA box white ------------>
+            
+            <h5>&nbsp; متوفر لهواتف الاندرويد فقط</h5>
+		</div><!------------end content cta ------------>
+        
+	</div> <!------------end content / div_content ------------>
+        <div class="footer">
+        <div class="hook-block hook-bottomCenter"><div class="component-msg" id="component-msg-DISCLAIMER"><p style="text-align: justify;"><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;"><span style="color: rgb(0, 0, 0); line-height: normal;">هذه
+ خدمة منظف الجوال. تتناسب هذه الخدمة مع معظم الجوالات المزودة بـنظام 
+الأندرويد فقط. كما تتناسب مع جوالات نوكيا، سوني إيريكسون، سامسونج، 
+موتورولا، إل جي، باناسونيك، ألكاتيل وغيرها. هذه الخدمة المذكورة من نوع 
+الخدمة المتاحه عن طريق الإشتراك والتي تم الاعلان عنها عن طريق SAM Media.
+ وقد تم تسجيل خدمتنا وماركتنا وشارتنا. في حالة رغبتك إستلام محتوى الخدمة
+ عليك بالاشتراك. مستخدمو Orange او Zain او Umniah سوف يستلمون 5 محتويات 
+أسبوعيا بسعر JD0.5 لكل محتوى. وقد تحتاج الجوالات إلى GPRS/ 3G وسوف يحسب 
+تكلفة البيانات في فاتورة منفصلة. وما طريقة انهاء الإشتراك؟ لمستخدمي 
+Orange او Zain او Umniah الالغاء بكتابة stop 200 وإرسالها إلى 93318. 
+معلومات اضافية: للمستخدمين من 18 سنة أو أكبر فقط. ولمن دون 18 سنة عليه 
+استئذان ولي الأمر أولا. تعمل شركة SAM Media وفقا لمدونة السلوك الدولية 
+لخدمات SMS.</span></span></span></p>
+</div></div>        </div>
+</div>
+<div class="div_cloudsbottom"></div>
+    
+<div class="op_confirm-checkbox op_confirm-checkbox-wrap">
+
+<input name="op_confirmCheckbox" value="N" type="hidden">
+<input checked="checked" id="op_confirm-checkbox" class="op_confirm-checkbox" name="op_confirmCheckbox" value="Y" style="display: none;" type="checkbox">
+
+    <div id="confirmation-op_confirm-wrapper" class="confirmation-op_confirm-wrapper bupper-popup-div" style="display: none; position: absolute; left: 0; top: 0;">
+        <div class="bupper-popup-block">
+                <div class="hook-block hook-confirmationBodyStart"><div class="confirmation-text" id="confirmation-text-op_confirm">OP_CONFIRM_PAGE_TEXT</div>
+</div>    <div class="hook-block hook-confirmationBodyEnd">        <button class="accept-confirmation" type="submit" value="Y" name="op_confirmCheckbox" id="accept-op_confirm-checkbox">OP_CONFIRM_PAGE_BUTTON_YES</button>
+            <button class="decline-confirmation" type="submit" value="DECLINED" name="op_confirmCheckbox" id="decline-op_confirm-checkbox">OP_CONFIRM_PAGE_BUTTON_NO</button>
+    </div>            </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#confirmation-op_confirm-wrapper .accept-confirmation').on('click', function (event) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            $('#op_confirm-checkbox').prop('checked', true);
+            $('#confirmation-op_confirm-wrapper').hide();
+
+            $('form').submit();
+        });
+
+        $('#confirmation-op_confirm-wrapper .decline-confirmation').on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $('#confirmation-op_confirm-wrapper').hide();
+            $('#op_confirm-checkbox').prop('checked', false);
+        });
+
+        var validate_confirmation_op_confirm_checkbox = function (event) {
+            if (!$('select#operator').length) {
+                return true;
+            }
+
+            var checkbox = $('#op_confirm-checkbox');
+            if (!checkbox.prop('checked')) {
+                $('#confirmation-op_confirm-wrapper').show();
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                return false;
+            }
+            return true;
+        };
+
+        $(document).ready(
+            function () {
+                $('form').on('submit', validate_confirmation_op_confirm_checkbox);
+            }
+        );
+    </script>
+
+</div>
+</form>
+
+
+
+
+    <script type="text/javascript" src="as_exitPop.js"></script>
+</body></html>

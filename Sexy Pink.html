@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <!-- base href="http://w1.buz2mobile.com/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Pragma" content="no-cache"><script src="Sexy%20Pink_files/analytics.js" async=""></script><script src="Sexy%20Pink_files/jquery.js"></script>    <link rel="stylesheet" type="text/css" href="Sexy%20Pink_files/operator.css">
+    <link rel="stylesheet" type="text/css" href="Sexy%20Pink_files/popups.css">
+    <link rel="stylesheet" type="text/css" href="Sexy%20Pink_files/hooks.css">
+    <style>.msisdn-input{
+	font-size:17px;
+	border:#CCC 1px solid;
+	width:200px;
+	height:30px;
+	padding:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	}
+
+.pin-input{
+	font-size:17px;
+	border:#CCC 1px solid;
+	width:150px;
+	height:30px;
+	padding:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	}
+	
+.msisdn-input-0{}
+.msisdnErrMsg{ 
+	color:rgba(255,0,0,1);
+	font-size:11px;
+	}
+
+.legal-checkbox{margin:10px auto;}
+.legal-checkbox-text, .legal-checkbox-text span{
+	font-size:11px;
+	line-height:12px;
+	color:#333;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+
+.legal-checkbox-text a{
+	color:#333;
+	text-decoration:none;
+	}
+
+.disclaimer{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	margin:30px auto 0 auto;
+	text-align:justify;
+	line-height:12px;
+	}
+
+.disclaimer a{
+	color:#333;
+	font-size:12px;
+	text-align:center;
+	}
+	
+.error{
+	height:15px;
+	font-size:11px;
+	color:#FF0000;	
+	}
+
+.msisdn-submit-button,.msisdn-submit-disable{
+	color:#000;
+	border:1px solid #d1dcdf; 
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px;
+	border-radius: 6px; 
+	padding: 10px 10px 10px 10px; 
+	text-decoration:none; 
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	font-weight:bold;
+ 	background-color: #f2f5f6; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f6), to(#c8d7dc));
+ 	background-image: -webkit-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: -moz-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: -ms-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: -o-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: linear-gradient(to bottom, #f2f5f6, #c8d7dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f2f5f6, endColorstr=#c8d7dc);
+	font-size:17px;
+	font-weight:bold;
+	padding:6px 24px;
+	width:180px;
+	margin:5px auto;
+	cursor:pointer;
+	}
+
+.pin-submit-button{
+	color:#000;
+	border:1px solid #d1dcdf; 
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px;
+	border-radius: 6px; 
+	padding: 10px 10px 10px 10px; 
+	text-decoration:none; 
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	font-weight:bold;
+ 	background-color: #f2f5f6; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f6), to(#c8d7dc));
+ 	background-image: -webkit-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: -moz-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: -ms-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: -o-linear-gradient(top, #f2f5f6, #c8d7dc);
+ 	background-image: linear-gradient(to bottom, #f2f5f6, #c8d7dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f2f5f6, endColorstr=#c8d7dc);
+	font-size:17px;
+	font-weight:bold;
+	padding:6px 24px;
+	width:180px;
+	margin:5px auto;
+	display:block;
+	cursor:pointer;
+	}
+
+body{
+	background-color:#feb5a2;
+  	font-family:Arial, Helvetica, sans-serif;
+  	margin: 0;
+  	padding:0;
+  	text-align:center;
+  	font-size:1em;
+	}
+
+.mobiletext{
+	font-weight:bold;
+	margin:10px 0px 0px 0px;
+}
+
+.wholepicture{
+	margin:0 0 5%;
+}
+
+.smallpic1{
+    width:17%;
+	display: inline;
+}
+
+.smallpic2{
+    width:60%;
+	display: inline;
+}
+
+.smallpic3{
+    width:17%;
+	display: inline;
+}
+
+.disclaimer {
+	text-align: justify;
+	font-size:10px;
+	padding:5px;
+	margin-top:30px;
+	color:#333;
+}
+
+.disclaimer a{
+	text-decoration:none;
+	color:#333;
+}
+
+
+
+@keyframes key
+{
+0%   {color:#600;}
+50%  {color:#F30;}
+100% {color:#600;}
+}
+
+@-webkit-keyframes key
+{
+0%   {color:#600;}
+50%  {color:#F30;}
+100% {color:#600;}
+}
+
+
+.TQ_txt{
+	color:#600;
+	font-weight:bold;
+	animation:key 1s infinite;
+	-webkit-animation:key 1s infinite;
+	}
+
+
+@media (max-width: 310px) {
+
+.TQ_txt{
+	font-size:24px;
+	}
+	
+.mssdn{
+	width:140px;
+	height:24px;
+	}
+
+}
+
+@media (max-width: 360px) {
+
+.TQ_txt{
+	font-size:28px;
+	}
+	
+.mssdn{
+	width:180px;
+	}
+
+}
+
+@media (max-width: 767px) { 
+.smallpic1{
+	    display:none;
+	}
+	
+.smallpic3{
+	    display:none;
+	}
+	
+.smallpic2{
+	width:100%;	
+	}
+	
+.TQ_txt{
+	font-size:28px;
+	}
+	
+.mssdn{
+	width:200px;
+	height:34px;
+	}
+	
+.btn{
+	width:200px;
+	}
+	
+.footeralign{
+		padding-top:90px;
+		}
+
+}
+	
+
+@media (min-width: 768px) {
+body{font-size:1.2em;}
+
+.smallpic2{
+	width:50%;
+	}
+	
+.wholepicture{
+		margin:0% 0 2%;
+	}
+	
+.mobiletext{
+		line-height:26px;
+	}
+	
+.TQ_txt{
+	font-size:28px;
+	}
+	
+.mssdn{
+	font-size:19px;
+	border:#CCC 1px solid;
+	width:200px;
+	height:34px;
+	}
+	
+.btn{
+	width:200px;
+	}
+	
+	.footeralign{
+		padding-top:400px;
+		}
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.TQ_txt{
+	font-size:33px;
+	}
+	
+	.mssdn{
+	width:200px;
+	height:35px;
+	}
+	
+}
+
+
+@media (min-width: 1200px) {
+body{font-size:1.3em;} 
+
+	.TQ_txt{
+	font-size:1.6em;
+	}
+	
+	.smallpic1, .smallpic3{
+		width:15%;
+	}
+	
+	.smallpic2{
+	width:40%;
+	margin-bottom:60px;	
+	}
+	
+	.mobiletext{
+		margin-top:-4%;
+		line-height:1.3em;
+	}
+	
+	.mssdn{
+	font-size:1.2em;
+	padding:3px;
+	width:220px;
+	height:35px;
+	}
+
+    .btn{
+	width:220px;
+	}
+
+}
+
+
+</style>    <title>Sexy Pink</title>
+</head>
+<body>    
+	<form id="mainForm" action="/ke/rd-sexy-pink"><img src="Sexy%20Pink_files/a.png" style="position: absolute;" height="0px" width="0px">
+                        <input name="country" value="ke" type="hidden">
+                                    <input name="handle" value="rd-sexy-pink" type="hidden">
+                                    <input name="offer" value="1" type="hidden">
+                                    <input name="device" value="smart" type="hidden">
+            <input name="_extracted" value="YToyOntzOjEwOiJzdGVwU3RhdGVzIjthOjY6e3M6MTU6ImNhcHR1cmVPcGVyYXRvciI7czo3OiJJbml0aWFsIjtzOjEzOiJjYXB0dXJlTXNpc2RuIjtzOjc6IkluaXRpYWwiO3M6MjA6ImNhcHR1cmVDb25maXJtYXRpb25zIjtzOjc6IkluaXRpYWwiO3M6Njoic2VuZE1vIjtzOjc6IkluaXRpYWwiO3M6MjE6Im9wZXJhdG9yQ29uZmlybWF0aW9ucyI7czo3OiJJbml0aWFsIjtzOjg6InNob3dNb1RxIjtzOjc6IkluaXRpYWwiO31zOjY6InZhbHVlcyI7YToxNTp7czo4OiJvcGVyYXRvciI7TjtzOjE3OiJvcGVyYXRvclN1Ym1pdHRlZCI7TjtzOjE1OiJwcmVmaXhTZWxlY3Rpb24iO047czoxOToic25hcHNob3RRdWVyeVN0cmluZyI7czo2ODoiWTI5MWJuUnllVDFyWlNab1lXNWtiR1U5Y21RdGMyVjRlUzF3YVc1ckptOW1abVZ5UFRFbVpHVjJhV05sUFhOdFlYSjAiO3M6MTE6InF1ZXJ5U3RyaW5nIjtOO3M6MTI6Im1hcHBlclN0cmluZyI7czoyMzU6InsicHVibGlzaGVyaWQiOiIiLCJjbGlja2lkIjoiZE9OMVVOeFBDZXBucWtORVlreXhaMlRweFA4WFB6czFRX2xlMmxRRHhTcnU5b2UyQjFONTFsMFRzRVBTaXFFZThILldJaUYxd3RUUE42dGJQaW84WnctLSIsInN1YmlkIjoiIiwibWFwcGVyX2NvZGUiOiJkT04xVU54UENlcG5xa05FWWt5eFoyVHB4UDhYUHpzMVFfbGUybFFEeFNydTlvZTJCMU41MWwwVHNFUFNpcUVlOEguV0lpRjF3dFRQTjZ0YlBpbzhady0tIn0iO3M6MTg6Im9yaWdpbmFsUGFyYW1ldGVycyI7YTo0OntzOjc6ImNvdW50cnkiO3M6Mjoia2UiO3M6NjoiaGFuZGxlIjtzOjEyOiJyZC1zZXh5LXBpbmsiO3M6NToib2ZmZXIiO3M6MToiMSI7czo2OiJkZXZpY2UiO3M6NToic21hcnQiO31zOjk6InNlc3Npb25JZCI7TjtzOjY6Im1zaXNkbiI7TjtzOjEzOiJsZWdhbENoZWNrYm94IjtOO3M6MjA6ImluY2VudGl2aXplZENoZWNrYm94IjtOO3M6MTU6Im1zaXNkblN1Ym1pdHRlZCI7TjtzOjk6InNlbmRpbmdNbyI7TjtzOjE4OiJvcF9jb25maXJtQ2hlY2tib3giO047czo2OiJob2xkTW8iO047fX0=" type="hidden">
+
+<input id="gaclientid" name="gaclientid" value="120329160.1429582530" type="hidden">
+    <div class="toplegal">
+                </div><div class="wholepicture">
+	<img src="Sexy%20Pink_files/pink_g1.jpg" class="smallpic1" alt="">
+	<img src="Sexy%20Pink_files/pink_phone.gif" class="smallpic2" alt="" id="drink">
+	<img src="Sexy%20Pink_files/pink_g2.jpg" class="smallpic3" alt="">
+</div>
+
+<div class="mobiletext"> 
+	<span style="letter-spacing:-1px;">Watch <a style="color:#600;">hot girls</a> exposing themselves now!</span><br>
+	Enter your mobile number:
+</div>
+
+<script>
+    var maxNum = [10];
+    var minNum = [10];
+    var pinMin = 4;
+
+    $(document).ready(function() {
+
+        // restrict phone input
+        $('.numeric-field').keypress(function(key) {
+            if (key.charCode == 13) { // enter key
+                return true;
+            }
+
+            if(key.charCode < 48 || key.charCode > 57) {
+                if (key.charCode != 0){
+                    return false;
+                }
+            }
+        });
+
+        $('.numeric-field').each(function() {
+            var element = this;
+            var jqElement = $(element);
+
+            focusInput(jqElement);
+            checkInputCompleted(jqElement);
+
+            var previousValue = element.value;
+            setInterval(function () {
+                if (element.value != previousValue) {
+                    previousValue = element.value;
+                    checkInputCompleted(jqElement);
+                }
+            }, 50);
+        });
+
+    });
+
+    function focusInput(input)
+    {
+        var id = input.attr('id');
+        var index = Number(id.substr(id.indexOf('_')+1));
+        var type = id.search('msisdn') != -1 ? 'msisdn' :'pin';
+
+        input.focus(function() {
+            setTimeout((function(el) {
+                var strLength = el.value.length;
+                return function() {
+                    if(el.setSelectionRange !== undefined) {
+                        el.setSelectionRange(strLength, strLength);
+                    } else {
+                        $(el).val(el.value);
+                    }
+                }}(this)), 5);
+        });
+
+        if (type == 'msisdn') {
+            if (index == 0){
+                $('#'+type+'_'+index).focus();
+            }
+        }else{
+            input.focus();
+        }
+    }
+
+    function checkInputCompleted(input)
+    {
+        var id = input.attr('id');
+        var index = Number(id.substr(id.indexOf('_')+1));
+        var type = id.search('msisdn') != -1 ? 'msisdn' :'pin';
+        var min = 0;
+        if (type == 'msisdn') {
+            min = minNum[index];
+        }else{
+            min = pinMin;
+        }
+        if (input.val().length >= min){
+            input.attr('finish','true');
+        }else{
+            input.removeAttr("finish");
+        }
+        checkAllInputCompleted(type);
+    }
+    function checkAllInputCompleted(type)
+    {
+        if (type == 'msisdn'){
+            for (var i=0;i<minNum.length;i++){
+                if ($('#'+type+'_'+i).attr('finish') != 'true'){
+                    disableSubmit(type);
+                    return;
+                }
+            }
+        }else{
+            if ($('#'+type).attr('finish') != 'true'){
+                disableSubmit(type);
+                return;
+            }
+        }
+        enableSubmit(type);
+     }
+    function disableSubmit(buttonType)
+    {
+        $('#'+buttonType+'-submit-button')
+         .attr("disabled", "disabled")
+         .removeClass(buttonType+'-submit-button')
+         .addClass(buttonType+'-submit-disable');
+    }
+
+    function enableSubmit(buttonType)
+    {
+        $('#'+buttonType+'-submit-button')
+         .removeAttr("disabled", "disabled")
+         .addClass(buttonType+'-submit-button')
+         .removeClass(buttonType+'-submit-disable');
+    }
+
+    function checkMsisdnValid (e) {
+        var operatorsPrefixes = {
+                                                                'KE_SAFARICOM':['070','071','072']
+                                                        ,'KE_AIRTEL':['073','074','078']
+                                                       }
+        var prefixes = ['073','074','078','070','071','072'];
+        var portable = false;
+        var errType = 0; //0 = no error, 1 = not a number, 2 = prefix not mismatch, 3 = operator mismatch, 4 = too less number, 5 = too many number,
+        var errMsg = {"OPERATOR_MISMATCH":"OPERATOR_MISMATCH","NOT_VALID_MSISDN":"Invalid mobile number","OPERATOR_NOT_SELECTED":"OPERATOR_NOT_SELECTED"};
+
+        if ($("#operator").val() == "-none-"){
+            errType = 6;
+        }
+        $("#msisdnErrMsg").empty();
+        $("input.msisdn").each(function() {
+            var msisdn = $(this).val();
+            var index = Number($(this).attr('id').substr(7));
+            var reg = /^\d+$/;
+            var result = reg.test(msisdn);
+            if (!result && errType == 0) {
+                errType = 1;
+            } else if (msisdn.length <  minNum[index] && errType == 0){
+                errType = 4;
+            } else if (msisdn.length > maxNum[index] && errType == 0) {
+                errType = 5;
+            } else if ($(this).attr('id') == "msisdn_0"){
+                var prefixesMatched = false;
+                if (portable){
+                    if (prefixes.length == 0){
+                        prefixesMatched = true;
+                    }else{
+                        for (var i=0; i<prefixes.length; i++){
+                            if (prefixes[i] != "" && prefixes[i] != null){
+                                if(msisdn.substr(0,prefixes[i].length) == prefixes[i]){
+                                    prefixesMatched = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (!prefixesMatched && errType == 0){
+                        errType = 2;
+                    }
+                }else{
+                    if ($("#operator").val() == undefined || $("#operator").val() == null){
+                        prefixesMatched = true;
+                    }else{
+                        for (var fqn in operatorsPrefixes){
+                            if ($("#operator").val() == fqn){
+                                for (var i=0; i<operatorsPrefixes[fqn].length; i++){
+                                    if(msisdn.substr(0,operatorsPrefixes[fqn][i].length) == operatorsPrefixes[fqn][i]){
+                                        prefixesMatched = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (!prefixesMatched && errType == 0){
+                        errType = 3;
+                    }
+                }
+            }
+
+        });
+        switch (errType){
+            case 1:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 2:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 3:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 4:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 5:
+                var errMsgIndex = "NOT_VALID_MSISDN";
+                break;
+            case 6:
+                var errMsgIndex = "OPERATOR_NOT_SELECTED";
+                break;
+
+        }
+
+        $("#msisdnErrMsg").append(errMsg[errMsgIndex]);
+
+        if (errType > 0) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        }
+
+        return true;
+    }
+
+    function checkPinValid (e) {
+        var errTypePin = 0; //0 = no error, 1 = not a pin, 2 = too less number, 3 = too many number,
+        var errMsgPin = {"MISMATCH_PIN":"MISMATCH_PIN","NOT_VALID_PIN":"Invalid PIN"};
+        var maxNum = 4;
+        var minNum = 4;
+
+        $("#pinErrMsg").empty();
+
+        $("#pin").each(function() {
+
+            var pin = $(this).val();
+            var index = Number($(this).attr('id').substr(4));
+            var reg = /^\d+$/;
+            var result = reg.test(pin);
+
+            if (!result && errTypePin == 0) {
+                errTypePin = 1;
+            } else if (pin.length <  minNum && errTypePin == 0){
+                errTypePin = 2;
+            } else if (pin.length > maxNum && errTypePin == 0) {
+                errTypePin = 3;
+            }
+
+        });
+        switch (errTypePin){
+            case 1:
+            case 2:
+            case 3:
+                var errMsgIndexPin = "NOT_VALID_PIN";
+                break;
+        }
+        $("#pinErrMsg").append(errMsgPin[errMsgIndexPin]);
+
+        if (errTypePin > 0) {
+            e.preventDefault();
+            return false;
+        }
+    }
+
+    function checkValidity(e){
+
+        if($("#pin").length ){
+           return checkPinValid(e);
+        }
+        if($("input.msisdn").length ){
+           return checkMsisdnValid(e);
+        }
+        return true;
+    }
+
+    $('#mainForm').submit(checkValidity);
+</script>
+
+
+    <script type="text/javascript">
+        function updateOperatorSelection(current, previous, isPrefix) {
+            var value = null;
+            var preValue = null;
+
+            if (isPrefix) {
+                var prefixsMap = {};
+
+                                    prefixsMap['KE_SAFARICOM'] = ["070","071","072"];
+                                    prefixsMap['KE_AIRTEL'] = ["073","074","078"];
+                
+                for (var operator in prefixsMap){
+                    var prefixs = prefixsMap[operator];
+
+                    if (value == null) {
+                        if (prefixs.indexOf(current) > -1) {
+                            value = operator;
+                        }
+                    }
+
+                    if (preValue == null) {
+                        if (prefixs.indexOf(previous) > -1) {
+                            preValue = operator;
+                        }
+                    }
+
+                    if (value != null && preValue != null) {
+                        break;
+                    }
+                }
+            } else {
+                value = current;
+                preValue = previous;
+            }
+
+            var prevSelector = "span[criteria*='"+ preValue +"']";
+            var selector = "span[criteria*='"+ value +"']";
+
+            $(prevSelector).hide();
+            $(selector).show();
+
+            var operatorsWithConfirmation = [];
+
+            if (operatorsWithConfirmation.hasOwnProperty(value)) {
+                $('#op_confirm-checkbox').prop('checked', false);
+                if (operatorsWithConfirmation[value] == 'displayWithYesButtonOnly') {
+                    $('#accept-op_confirm-checkbox').show();
+                    $('#decline-op_confirm-checkbox').hide();
+                } else if (operatorsWithConfirmation[value] == 'displayWithNoButtonOnly') {
+                    $('#accept-op_confirm-checkbox').hide();
+                    $('#decline-op_confirm-checkbox').show();
+                } else {
+                    $('#accept-op_confirm-checkbox').show();
+                    $('#decline-op_confirm-checkbox').show();
+                }
+            } else {
+                $('#op_confirm-checkbox').prop('checked', true);
+            }
+
+            // External page handling.
+            $('a.component-link').attr('href', function( _idx, oldHref) {
+                if (value == '-none-') {
+                    return oldHref.replace(/operator=[^&]*/, 'operator=');
+                } else {
+                    return oldHref.replace(/operator=[^&]*/, 'operator=' + value);
+                }
+            });
+        }
+    </script>
+
+
+
+<div class="hook-block hook-beforeInput"><span class="msisdnErrMsg errMsg" id="msisdnErrMsg"></span><span class="operatorErrMsg errMsg" id="operatorErrMsg"></span>
+</div><div class="msisdn-group">
+<input name="msisdnSubmitted" value="Y" type="hidden">
+    <span class="msisdn msisdn-input-wrap msisdn-input-wrap-0"><input class="numeric-field msisdn msisdn-input msisdn-input-0" maxlength="10" id="msisdn_0" name="msisdn[0]" value="07" size="10" tabindex="1" autofocus="" type="text"></span>
+</div>
+
+<div class="hook-block hook-beforeSubmit">
+    <input name="incentivizedCheckbox" value="Y" type="hidden">
+</div><button disabled="disabled" type="submit" id="msisdn-submit-button" class="submit-button msisdn-submit-disable" value="proceed">Download
+</button>
+
+    	<div class="footer">
+    		    		<div class="hook-block hook-bottomCenter"><div class="component-msg" id="component-msg-DISCLAIMER"><p><span style="font-size:12px;">To
+ join this service, users must be 16 years or older and have account 
+holder's permission. This is a content subscription service. Costs: 30 
+KSH/SMS, 7 SMS/week. This service is available for Safaricom and Airtel 
+users only. Users will receive a link to their personal download page 
+where they can download the best content for their mobile. Phone must be
+ WAP/GPRS ENABLED. Errors will be billed. To cancel the service: send 
+STOP SS to 30333 for Safaricom/Airtel, or press *100# for Safaricom. By 
+subscribing to this service, you have read, understood, and agreed to be
+ bound by these terms and condition and receive free marketing 
+promotional text messages from us. Helpdesk: 0714869943 or 0736596926 
+operates during normal working hours, or send an email to <a href="mailto:help@mobilesawa.com">help@mobilesawa.com</a></span></p>
+
+<p style="text-align: center;"><span style="font-size:12px;"><a href="http://webcms.buz2mobile.com/main/tnc/8/KE">FAQ</a></span></p>
+</div></div>    		    	</div> 
+	
+<div class="op_confirm-checkbox op_confirm-checkbox-wrap">
+
+<input name="op_confirmCheckbox" value="N" type="hidden">
+<input id="op_confirm-checkbox" class="op_confirm-checkbox" name="op_confirmCheckbox" value="Y" style="display: none;" type="checkbox">
+
+    <div id="confirmation-op_confirm-wrapper" class="confirmation-op_confirm-wrapper bupper-popup-div" style="display: none; position: absolute; left: 0; top: 0;">
+        <div class="bupper-popup-block">
+                <div class="hook-block hook-confirmationBodyStart"><div class="confirmation-text" id="confirmation-text-op_confirm">OP_CONFIRM_PAGE_TEXT</div>
+</div>    <div class="hook-block hook-confirmationBodyEnd"></div>            </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#confirmation-op_confirm-wrapper .accept-confirmation').on('click', function (event) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            $('#op_confirm-checkbox').prop('checked', true);
+            $('#confirmation-op_confirm-wrapper').hide();
+
+            $('form').submit();
+        });
+
+        $('#confirmation-op_confirm-wrapper .decline-confirmation').on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $('#confirmation-op_confirm-wrapper').hide();
+            $('#op_confirm-checkbox').prop('checked', false);
+        });
+
+        var validate_confirmation_op_confirm_checkbox = function (event) {
+            if (!$('select#operator').length) {
+                return true;
+            }
+
+            var checkbox = $('#op_confirm-checkbox');
+            if (!checkbox.prop('checked')) {
+                $('#confirmation-op_confirm-wrapper').show();
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                return false;
+            }
+            return true;
+        };
+
+        $(document).ready(
+            function () {
+                $('form').on('submit', validate_confirmation_op_confirm_checkbox);
+            }
+        );
+    </script>
+
+</div>
+</form>
+
+
+
+
+
+
+
+</body></html>

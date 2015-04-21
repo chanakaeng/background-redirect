@@ -1,0 +1,86 @@
+.operator-group {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  width:220px;
+  margin:10px auto;
+}
+.operator-group:before, .operator-group:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888 transparent;
+  pointer-events: none;
+}
+.operator-group:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+.operator-group:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.operator-selection {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  height:30px;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: #333;
+  background: #f2f2f2;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.operator-selection:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #ccc;
+  outline-offset: -2px;
+}
+
+.operator-selection > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+   appearance: none;
+}
+
+
+
+/* ----------------- IE 8 customized css for height:auto --------------------*/
+
+@media \0screen {
+  .imgIE8 { 
+  	width: auto; /* for ie 8 */
+  }
+}
+
+/* ----------------- IMG 100% ------------------*/
+
+.img100pct{width:100%;}

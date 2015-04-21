@@ -1,0 +1,26 @@
+/* ---------------------------- top hooks and bottom hooks layout styling ------------------------------ */
+
+.footer, .toplegal {font-size: 11px; text-align: justify; display:table; width:100%;} 
+
+.toplegal p {margin: 0;}
+
+.popup-bottom, .popup-top{display:table-row;}
+
+.hook-confirmationBodyStart, hook-confirmationBodyEnd{padding:5px; text-align:center;}
+.hook-confirmationBodyStart{margin-top:10px;}
+.hook-confirmationBodyEnd{margin-bottom:10px;}
+
+.hook-topLeft, .hook-topCenter, .hook-topRight{margin:0; top:0;}
+.hook-confirmationTopLeft, .hook-confirmationTopCenter, .hook-confirmationTopRight{margin:0;}
+
+.hook-topLeft, .hook-bottomLeft, .hook-confirmationTopLeft, .hook-confirmationBottomLeft{text-align:left;}
+.hook-topCenter, .hook-bottomCenter{text-align:justify;}
+.hook-topRight, .hook-bottomRight, .hook-confirmationTopRight, .hook-confirmationBottomRight{text-align:right;}
+.hook-confirmationTopCenter, .hook-confirmationBottomCenter{text-align:center;}
+
+.hook-bottomLeft, .hook-bottomCenter, .hook-bottomRight, .hook-topLeft, .hook-topCenter, .hook-topRight {display:table-cell; padding:5px; vertical-align: top;}
+.hook-confirmationTopLeft, .hook-confirmationTopCenter, .hook-confirmationTopRight, .hook-confirmationBottomLeft, .hook-confirmationBottomCenter, .hook-confirmationBottomRight
+{display:table-cell; padding:5px;}
+
+
+/* ---------------------------- end top hooks and bottom hooks layout styling ------------------------------ */
